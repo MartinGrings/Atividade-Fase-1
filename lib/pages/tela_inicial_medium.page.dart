@@ -15,13 +15,12 @@ class TelaInicialMedium extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Image.asset(
-                "assets/images/medium.png",
-                width: 140,
-                key: const ValueKey("imageMedium"),
-              ),
-              const SizedBox(
-                height: 150,
+              Expanded(
+                child: Image.asset(
+                  "assets/images/medium.png",
+                  width: 180,
+                  key: const ValueKey("imageMedium"),
+                ),
               ),
               const Text(
                 "Join Medium.",
@@ -70,16 +69,20 @@ class TelaInicialMedium extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(),
-                ),
-                padding: const EdgeInsets.all(15),
-                child: Image.asset(
-                  "assets/images/facebook.png",
-                  height: 28,
-                  key: const ValueKey("buttonFacebook"),
+              InkWell(
+                onTap: () {},
+                borderRadius: BorderRadius.circular(60),
+                child: Container(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(),
+                  ),
+                  padding: const EdgeInsets.all(15),
+                  child: Image.asset(
+                    "assets/images/facebook.png",
+                    height: 28,
+                    key: const ValueKey("buttonFacebook"),
+                  ),
                 ),
               ),
               const SizedBox(
@@ -88,7 +91,7 @@ class TelaInicialMedium extends StatelessWidget {
               RichText(
                 textAlign: TextAlign.center,
                 text: const TextSpan(
-                  text: "Already have an account?",
+                  text: "Already have an account? ",
                   style: TextStyle(
                     color: Colors.black,
                   ),
@@ -102,43 +105,45 @@ class TelaInicialMedium extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 50,
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              RichText(
-                text: const TextSpan(
-                  text: "By signing up, you agree to our ",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: "Terms of Service",
-                      style: TextStyle(
-                        color: Colors.green,
-                      ),
-                    ),
-                    TextSpan(
-                      text: " and acknowledge that our ",
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: RichText(
+                    text: const TextSpan(
+                      text: "By signing up, you agree to our ",
                       style: TextStyle(
                         color: Colors.black,
+                        fontSize: 13,
                       ),
+                      children: [
+                        TextSpan(
+                          text: "Terms of Service",
+                          style: TextStyle(
+                            color: Colors.green,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                        TextSpan(
+                          text: " and acknowledge that our ",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "Privacy Policy",
+                          style: TextStyle(
+                            color: Colors.green,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                        TextSpan(
+                            text: " applies to you",
+                            style: TextStyle(
+                              color: Colors.black,
+                            ))
+                      ],
                     ),
-                    TextSpan(
-                      text: "Privacy Policy",
-                      style: TextStyle(
-                        color: Colors.green,
-                      ),
-                    ),
-                    TextSpan(
-                        text: " applies to you",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ))
-                  ],
+                  ),
                 ),
               )
             ],
