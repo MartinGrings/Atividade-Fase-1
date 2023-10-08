@@ -14,24 +14,19 @@ class TelaInicialMedium extends StatelessWidget {
             horizontal: 35,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Image.asset(
                 "assets/images/medium.png",
-                width: 35,
-                height: 35,
+                width: 140,
                 key: const ValueKey("imageMedium"),
               ),
               const SizedBox(
-                height: 140,
+                height: 150,
               ),
-              const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Join Medium.",
-                  style: TextStyle(fontSize: 45),
-                  key: ValueKey("textTitle"),
-                ),
+              const Text(
+                "Join Medium.",
+                style: TextStyle(fontSize: 45),
+                key: ValueKey("textTitle"),
               ),
               const SizedBox(
                 height: 30,

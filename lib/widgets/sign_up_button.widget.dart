@@ -17,6 +17,7 @@ class SignUpButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(55),
       child: Container(
         height: 55,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           border: Border.all(),
           borderRadius: BorderRadius.circular(55),
@@ -28,15 +29,14 @@ class SignUpButton extends StatelessWidget {
               pathImage,
               width: 20,
             ),
-            const SizedBox(
-              width: 15,
-            ),
-            Text(
-              text,
-              style: const TextStyle(
-                fontSize: 16,
+            Expanded(
+              child: Text(
+                text,
+                style: const TextStyle(
+                  fontSize: 16,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             )
           ],
         ),
